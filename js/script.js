@@ -10,6 +10,7 @@ console.log(eta);
 var costoTragitto = kmDaPercorrere * 0.21;
 
 var sconto = 0;
+console.log(costoTragitto);
 
 if (eta < 18) {
     sconto = costoTragitto * 0.2;
@@ -20,3 +21,7 @@ if (eta < 18) {
 } else {
     costoTragitto -= sconto;
 }
+console.log(costoTragitto);
+
+// Uscita prezzo html
+document.getElementById('prezzo-tragitto').innerHTML = costoTragitto.toFixed(2) + ' Euro'; 
